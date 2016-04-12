@@ -3,7 +3,7 @@ MAINTAINER Matt Bodenhamer <mbodenhamer@mbodenhamer.com>
 
 ENV JYTHON_VERSION 2.7.0
 
-RUN apk update && apk add \
+RUN apk add --no-cache \
     curl
 
 RUN curl -L "http://search.maven.org/remotecontent?filepath=org/python/jython-installer/${JYTHON_VERSION}/jython-installer-${JYTHON_VERSION}.jar" -o jython_installer-${JYTHON_VERSION}.jar && \
